@@ -1,4 +1,4 @@
-# Django settings for cLoudspeaker project.
+# Django settings for Project project.
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
@@ -9,12 +9,12 @@ ADMINS = (
 
 MANAGERS = ADMINS
 
-DATABASE_ENGINE = ''           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-DATABASE_NAME = ''             # Or path to database file if using sqlite3.
-DATABASE_USER = ''             # Not used with sqlite3.
-DATABASE_PASSWORD = ''         # Not used with sqlite3.
-DATABASE_HOST = ''             # Set to empty string for localhost. Not used with sqlite3.
-DATABASE_PORT = ''             # Set to empty string for default. Not used with sqlite3.
+DATABASE_ENGINE='postgresql_psycopg2'           # 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+DATABASE_NAME='djangostack'             # Or path to database file if using sqlite3.
+DATABASE_USER='bitnami'             # Not used with sqlite3.
+DATABASE_PASSWORD='8002f2badd'         # Not used with sqlite3.
+DATABASE_HOST='/opt/bitnami/postgresql'             # Set to empty string for localhost. Not used with sqlite3.
+DATABASE_PORT='5432'             # Set to empty string for default. Not used with sqlite3.
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -48,7 +48,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = '3cy#!=s6fj6l^*9_dhc*esya+a(*zpikrqjhvg8q&-!62)hc@_'
+SECRET_KEY = 'a+zah($&upp8j2au^btl*ka3ddqyd$wi1eb$t4!jk__@y$gvly'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -63,7 +63,7 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.AuthenticationMiddleware',
 )
 
-ROOT_URLCONF = 'cLoudspeaker.urls'
+ROOT_URLCONF = 'Project.urls'
 
 TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
