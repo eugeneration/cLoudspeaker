@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+{% block scripts %}
+<script type="text/javascript">
+
+	function disableSelection(target){
+		if (typeof target.onselectstart!="undefined") //IE 
+	    		target.onselectstart=function(){return false;}
+		else if (typeof target.style.MozUserSelect!="undefined") //Firefox
+	   		target.style.MozUserSelect="none";
+		else //Chrome, Opera
+	  		target.onmousedown=function(){return false;}
+		target.style.cursor = "default"
+	}
+
+	$(document).ready(function() {
+		disableSelection(document.body)
+	});
+</script>
+<script src="{{ url_for('static', filename='date_picker.js') }}"></script>
+{% endblock %}
+{% block body %}
+
+	<div id="search a song" style="clear:both"></div><br style="clear:both;" />
+
+	<form action="{{ url_for('create_event') }}" method="post">
+		<input type="submit" value = "Create" onclick="return confirmSubmit()" />
+	</form>
+{% endblock %}
